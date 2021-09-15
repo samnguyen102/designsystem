@@ -1,13 +1,14 @@
 {
   "name": "@sharingexcess/designsystem",
-  "version": "1.0.0",
+  "version": "1.0.6",
+  "private": false,
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
     "build"
   ],
   "types": "build/index.d.ts",
-  "description": "A skeleton to create your own React component library using Rollup, TypeScript, Sass and Storybook",
+  "description": "A component kit for the Sharing Excess Design System built with React, TypeScript, Jest, and Storybook",
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
@@ -19,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HarveyD/react-component-library.git"
+    "url": "git+https://github.com/sharingexcess/designsystem.git"
   },
   "keywords": [
     "React",
@@ -30,12 +31,12 @@
     "Sass",
     "Storybook"
   ],
-  "author": "Harvey Delaney",
+  "author": "Ryan McHenry",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HarveyD/react-component-library/issues"
+    "url": "https://github.com/sharingexcess/designsystem/issues"
   },
-  "homepage": "https://github.com/HarveyD/react-component-library#readme",
+  "homepage": "https://github.com/sharingexcess/designsystem#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"

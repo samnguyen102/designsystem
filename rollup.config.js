@@ -30,15 +30,35 @@ export default {
     copy({
       targets: [
         {
-          src: "src/variables.scss",
+          src: "src/index.scss",
           dest: "build",
-          rename: "variables.scss"
+          rename: "index.scss"
         },
         {
-          src: "src/typography.scss",
+          src: "src/Button/Button.scss",
           dest: "build",
-          rename: "typography.scss"
-        }
+          rename: "Button/Button.scss"
+        },
+        {
+          src: "src/Image/Image.scss",
+          dest: "build",
+          rename: "Image/Image.scss"
+        },
+        {
+          src: "src/Input/Input.scss",
+          dest: "build",
+          rename: "Input/Input.scss"
+        },
+        {
+          src: "src/Spacer/Spacer.scss",
+          dest: "build",
+          rename: "Spacer/Spacer.scss"
+        },
+        {
+          src: "src/Text/Text.scss",
+          dest: "build",
+          rename: "Text/Text.scss"
+        },
       ]
     })
   ]

@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { DEFAULT_FALLBACK_IMAGE } from 'utils/constants'
+// import DEFAULT_FALLBACK_IMAGE from '../fallback.jpeg'
 import ImageProps from './Image.interface'
 
 /**
@@ -24,11 +24,11 @@ import ImageProps from './Image.interface'
  * @return HTML <img> element
  */
 export const Image: FC<ImageProps> = ({ src, classList, id, alt }) => {
-  const handleFallback = (e: { target: any }) => {
-    if (e.target.src !== DEFAULT_FALLBACK_IMAGE) {
-      e.target.src = DEFAULT_FALLBACK_IMAGE
-    }
-  }
+  // const handleFallback = (e: { target: any }) => {
+  //   if (e.target.src !== DEFAULT_FALLBACK_IMAGE) {
+  //     e.target.src = DEFAULT_FALLBACK_IMAGE
+  //   }
+  // }
 
   let className = `izo-image`
   if (classList) {
@@ -40,7 +40,7 @@ export const Image: FC<ImageProps> = ({ src, classList, id, alt }) => {
       src={src}
       className={className}
       id={id}
-      onError={(e) => handleFallback(e)}
+      // onError={(e) => handleFallback(e)}
       alt={alt}
     />
   )
