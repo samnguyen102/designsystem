@@ -54,7 +54,7 @@ export const Text: FC<TextProps> = ({
 }) => {
   let className = `se-text ${type} ${align} ${color} ${
     wrap ? 'wrap' : 'no-wrap'
-  } ${shadow ? 'shadow' : 'no-shadow'}`
+  }${shadow ? ' shadow' : ''}`
   if (classList) {
     className = `${className} ${classList.join(' ')}`
   }

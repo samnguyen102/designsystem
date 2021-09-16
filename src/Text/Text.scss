@@ -3,102 +3,54 @@
   font-family: 'Montserrat';
 
   &.primary-header {
-    font-weight: 900;
     font-size: clamp(36px, 4vw, 64px);
-    line-height: 1.2em;
-
-    &.shadow {
-      // text-shadow: 0px 4px 4px var(--se-black-transparent);
-      text-shadow: var(--se-shadow-small);
-    }
+    line-height: 1.3em;
+    font-weight: 900;
 
     @include mobile {
-      font-size: 24px;
-      font-weight: 900;
-      line-height: 32px;
-
-      &.shadow {
-        text-shadow: 0px 2px 2px var(--se-black-transparent);
-      }
+      font-size: 32px;
     }
   }
 
   &.secondary-header {
-    font-size: 48px;
-    line-height: 64px;
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.3em;
     font-weight: 700;
 
-    &.shadow {
-      text-shadow: 0px 2px 4px var(--se-black-transparent);
-    }
-
     @include mobile {
-      font-size: 20px;
+      font-size: 28px;
       line-height: 30px;
-
-      &.shadow {
-        text-shadow: 0px 1px 2px var(--se-black-transparent);
-      }
     }
   }
 
   &.section-header {
-    font-size: 28px;
-    line-height: 40px;
+    font-size: clamp(20px, 2vw, 32px);
+    line-height: 1.3em;
     font-weight: 700;
 
-    &.shadow {
-      text-shadow: 0px 1px 4px var(--se-black-transparent);
-    }
-
     @include mobile {
-      font-size: 18px;
-      line-height: 24px;
-
-      &.shadow {
-        text-shadow: 0px 1px 2px var(--se-black-transparent);
-      }
+      font-size: 24px;
     }
   }
 
   &.subheader {
-    font-size: clamp(14px, 1.8vw, 22px);
-    line-height: 1.5em;
-    font-weight: 400;
-
-    &.shadow {
-      text-shadow: 0px 1px 2px var(--se-black-transparent);
-    }
+    font-size: clamp(14px, 1.3vw, 20px);
+    line-height: 1.6em;
+    font-weight: 500;
 
     @include mobile {
       font-size: 14px;
-      line-height: 20px;
-
-      &.shadow {
-        text-shadow: 0px 1px 1px var(--se-black-transparent);
-      }
     }
   }
 
   &.small-header {
-    font-size: 22px;
-    line-height: 24px;
-    letter-spacing: 4px;
+    font-size: clamp(16px, 1.5vw, 24px);
+    line-height: 1.5em;
+    letter-spacing: 0.2em;
     font-weight: 700;
 
-    &.shadow {
-      text-shadow: 0px 1px 2px var(--se-black-transparent);
-    }
-
     @include mobile {
-      font-size: 12px;
-      font-weight: bolder;
-      line-height: 16px;
-      letter-spacing: 8px;
-
-      &.shadow {
-        text-shadow: 0px 1px 1px var(--se-black-transparent);
-      }
+      font-size: 14px;
     }
   }
 
@@ -144,5 +96,9 @@
 
   &.grey {
     color: var(--se-grey-primary);
+  }
+
+  &.shadow {
+    text-shadow: var(--se-shadow-small);
   }
 }

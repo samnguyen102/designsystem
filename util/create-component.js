@@ -1,34 +1,89 @@
-require("colors");
-const fs = require("fs");
-const templates = require("./templates");
+const fs = require('fs') //eslint-disable-line
 
-const componentName = process.argv[2];
+const path = process.argv[2]
+const name = path.substr(path.lastIndexOf('/') + 1)
 
-if (!componentName) {
-  console.error("Please supply a valid component name".red);
-  process.exit(1);
+if (!name || name.substr(0, 1) !== name.substr(0, 1).toUpperCase()) {
+  console.log(
+    'Please provide a valid component name to create a new component! Component name must start with a capital letter.'
+  )
+  console.log('Proper CLI format: yarn run create_component <COMPONENT_NAME>')
+  return
 }
 
-console.log("Creating Component Templates with name: " + componentName);
+const basePath = `./src/${path}`
+console.log(`Creating new component ${name} in ${basePath}`)
 
-const componentDirectory = `./src/${componentName}`;
+try {
+  // Create new Component Directory
+  fs.mkdirSync(`${basePath}`, { recursive: true })
 
-if (fs.existsSync(componentDirectory)) {
-  console.error(`Component ${componentName} already exists.`.red);
-  process.exit(1);
-}
-
-fs.mkdirSync(componentDirectory);
-
-const generatedTemplates = templates.map((template) => template(componentName));
-
-generatedTemplates.forEach((template) => {
+  // Create new Component Typescript file
   fs.writeFileSync(
-    `${componentDirectory}/${componentName}${template.extension}`,
-    template.content
-  );
-});
+    `${basePath}/${name}.tsx`,
+    `import React, { FC } from 'react'
+import ${name}Props from './${name}.interface'
 
-console.log(
-  "Successfully created component under: " + componentDirectory.green
-);
+export const ${name}: FC<${name}Props> = ({ id, classList }) => {
+  let className = \`se-${name.toLowerCase()}\`
+  if (classList) {
+    className = \`\${className} \${classList.join(' ')}\`
+  }
+
+  return (
+    <div id={id} className={className}>
+      {/* Add your content here */}
+    </div>
+  )
+}
+`
+  )
+
+  // Export new component from components/index.ts
+  fs.appendFileSync(`./src/index.ts`, `export * from './${path}/${name}'\n`)
+
+  // Create new Component interface file
+  fs.writeFileSync(
+    `${basePath}/${name}.interface.ts`,
+    `export default interface ${name}Props {
+  classList?: string[]
+  id?: string
+}
+`
+  )
+
+  // Create new Component test file
+  fs.writeFileSync(
+    `${basePath}/${name}.spec.tsx`,
+    `import React from 'react'
+import { shallow } from 'enzyme'
+import { ${name} } from './${name}'
+
+describe('${name}', () => {
+  const wrapper = shallow(<${name} />)
+  it('Should render without crashing.', () => {
+    const c = wrapper.find('#${name}')
+    expect(c.length).toBe(1)
+  })
+})
+`
+  )
+
+  // Create new Component .scss file
+
+  fs.writeFileSync(
+    `${basePath}/${name}.scss`,
+    `.se-${name.toLowerCase()} {
+  // add your component styles here
+}
+`
+  )
+
+  // Import new .scss file into styles/index.global.scss
+  fs.appendFileSync(`./src/index.scss`, `@import '${path}/${name}.scss';\n`)
+
+  console.log('Successfully created new component!')
+  return
+} catch (e) {
+  console.error('Failed to create new component:', e)
+}
