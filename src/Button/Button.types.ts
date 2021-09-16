@@ -6,6 +6,7 @@ export default interface Button
   type?: 'primary' | 'secondary' | 'tertiary'
   size?: 'small' | 'medium' | 'large'
   color?: 'white' | 'green' | 'black'
+  fullWidth?: boolean
   classList?: string[]
   children: ReactNode
   handler?: () => any

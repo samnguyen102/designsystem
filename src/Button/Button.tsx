@@ -47,10 +47,13 @@ export const Button: FC<ButtonProps> = ({
   color = 'white',
   id,
   classList,
+  fullWidth,
   handler,
   disabled,
 }) => {
-  let className = `se-button type-${type} size-${size} color-${color}`
+  let className = `se-button type-${type} size-${size} color-${color}${
+    fullWidth ? ' full-width' : ''
+  }`
   if (classList) {
     className = `${className} ${classList.join(' ')}`
   }

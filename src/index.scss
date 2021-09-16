@@ -14,6 +14,13 @@
     rgba(123, 218, 83, 1),
     rgba(62, 113, 40, 1)
   );
+  --se-shadow-small: 0 clamp(2px, 0.32vw, 6px) clamp(2px, 0.32vw, 6px)
+    var(--se-black-transparent);
+  --se-shadow-medium: 0 clamp(4px, 1vw, 12px) clamp(4px, 1vw, 12px)
+    var(--se-black-transparent);
+  --se-shadow-large: 0 clamp(8px, 1.6vw, 16px) clamp(8px, 1.6vw, 16px)
+    var(--se-black-transparent);
+
   --se-green-primary: rgba(78, 165, 40, 1);
   --se-green-transparent: rgba(78, 165, 40, 0.2);
   --se-blue-primary: rgba(78, 108, 231, 1);
@@ -74,3 +81,4 @@
 @import './Input/Input.scss';
 @import './Spacer/Spacer.scss';
 @import './Text/Text.scss';
+@import './ExternalLink/ExternalLink.scss';

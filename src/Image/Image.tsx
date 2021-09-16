@@ -30,7 +30,7 @@ export const Image: FC<ImageProps> = ({ src, classList, id, alt }) => {
   //   }
   // }
 
-  let className = `izo-image`
+  let className = `se-image`
   if (classList) {
     className = `${className} ${classList.join(' ')}`
   }

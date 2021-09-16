@@ -5,10 +5,12 @@ export default interface Text extends Omit<HTMLProps<HTMLDivElement>, 'wrap'> {
   type?:
     | 'primary-header'
     | 'secondary-header'
+    | 'section-header'
     | 'small-header'
     | 'subheader'
     | 'paragraph'
-  color?: 'black' | 'white' | 'green'
+    | 'small'
+  color?: 'black' | 'white' | 'green' | 'grey'
   shadow?: boolean
   id?: string
   align?: 'left' | 'center' | 'right'
