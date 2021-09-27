@@ -40,6 +40,9 @@ import TextProps from './Text.interface'
  * Used to define whether the text should wrap onto multiple lines,
  * or cut off with an ellipsis
  *
+ * @param bold: boolean
+ * Make text bold by default
+ *
  * @return HTML <div/> element containing provided text
  */
 export const Text: FC<TextProps> = ({
@@ -51,10 +54,11 @@ export const Text: FC<TextProps> = ({
   classList,
   align = 'left',
   wrap = true,
+  bold = false,
 }) => {
   let className = `se-text ${type} ${align} ${color} ${
     wrap ? 'wrap' : 'no-wrap'
-  }${shadow ? ' shadow' : ''}`
+  }${shadow ? ' shadow' : ''}${bold ? ' bold' : ''}`
   if (classList) {
     className = `${className} ${classList.join(' ')}`
   }

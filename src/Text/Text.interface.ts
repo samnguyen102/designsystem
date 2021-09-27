@@ -10,10 +10,11 @@ export default interface Text extends Omit<HTMLProps<HTMLDivElement>, 'wrap'> {
     | 'subheader'
     | 'paragraph'
     | 'small'
-  color?: 'black' | 'white' | 'green' | 'grey'
+  color?: 'black' | 'white' | 'green' | 'grey' | 'blue'
   shadow?: boolean
   id?: string
   align?: 'left' | 'center' | 'right'
   wrap?: boolean
   classList?: string[]
+  bold?: boolean
 }
