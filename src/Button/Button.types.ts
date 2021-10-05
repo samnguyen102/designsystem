@@ -5,7 +5,7 @@ export default interface Button
   id?: string
   type?: 'primary' | 'secondary' | 'tertiary'
   size?: 'small' | 'medium' | 'large'
-  color?: 'white' | 'green' | 'black'
+  color?: 'white' | 'green' | 'black' | 'blue'
   fullWidth?: boolean
   classList?: string[]
   children: ReactNode

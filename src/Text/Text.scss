@@ -102,6 +102,10 @@
     color: var(--se-blue-primary);
   }
 
+  &.red {
+    color: var(--se-red-primary);
+  }
+
   &.shadow {
     text-shadow: var(--se-shadow-small);
   }

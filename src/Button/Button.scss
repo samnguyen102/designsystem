@@ -103,6 +103,11 @@
       background: var(--se-green-primary);
       color: var(--se-white);
     }
+
+    &.color-blue {
+      background: var(--se-blue-primary);
+      color: var(--se-white);
+    }
   }
 
   &.type-secondary {
@@ -118,6 +123,11 @@
     &.color-green {
       background: var(--se-green-transparent);
       color: var(--se-green-primary);
+    }
+
+    &.color-blue {
+      background: var(--se-blue-transparent);
+      color: var(--se-blue-primary);
     }
   }
 
@@ -145,9 +155,9 @@
     }
 
     &.color-green {
-      color: var(--se-green);
+      color: var(--se-green-primary);
       &:after {
-        background: var(--se-green);
+        background: var(--se-green-primary);
       }
     }
 
@@ -155,6 +165,13 @@
       color: var(--se-black);
       &:after {
         background: var(--se-black);
+      }
+    }
+
+    &.color-blue {
+      color: var(--se-blue-primary);
+      &:after {
+        background: var(--se-blue-primary);
       }
     }
   }

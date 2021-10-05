@@ -76,6 +76,11 @@ export default {
           dest: 'build',
           rename: 'Logo/Logo.scss',
         },
+        {
+          src: 'src/Modal/Modal.scss',
+          dest: 'build',
+          rename: 'Modal/Modal.scss',
+        },
       ],
     }),
   ],

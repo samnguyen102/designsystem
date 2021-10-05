@@ -14,9 +14,9 @@
     rgba(123, 218, 83, 1),
     rgba(62, 113, 40, 1)
   );
-  --se-shadow-small: 0 clamp(2px, 0.32vw, 6px) clamp(2px, 0.32vw, 6px)
+  --se-shadow-small: 0 clamp(2px, 0.24vw, 4px) clamp(2px, 0.24vw, 4px)
     var(--se-black-transparent);
-  --se-shadow-medium: 0 clamp(4px, 1vw, 12px) clamp(4px, 1vw, 12px)
+  --se-shadow-medium: 0 clamp(4px, 0.8vw, 10px) clamp(4px, 0.8vw, 10px)
     var(--se-black-transparent);
   --se-shadow-large: 0 clamp(8px, 1.6vw, 16px) clamp(8px, 1.6vw, 16px)
     var(--se-black-transparent);
@@ -74,6 +74,30 @@
     @content;
   }
 }
+
+@mixin fade-in {
+  opacity: 0;
+  animation: fade-in 0.32s ease forwards;
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin move-in {
+  animation: move-in 0.32s ease forwards;
+
+  @keyframes move-in {
+    from {
+      transform: translateY(100vw);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
 // END: SASS mixins
 
 @import './Button/Button.scss';
@@ -84,3 +108,4 @@
 @import './ExternalLink/ExternalLink.scss';
 @import './Card/Card.scss';
 @import './Logo/Logo.scss';
+@import './Modal/Modal.scss';

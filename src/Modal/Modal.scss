@@ -1,0 +1,28 @@
+#se-modal-background {
+  position: fixed;
+  z-index: 50;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include fade-in;
+
+  .se-modal {
+    position: relative;
+    width: 92vw;
+    max-width: 600px;
+    padding: 32px;
+    background: var(--se-white);
+    border-radius: 8px;
+    box-shadow: var(--se-shadow-large);
+    @include move-in;
+
+    @include mobile {
+      padding: 24px 16px;
+    }
+  }
+}

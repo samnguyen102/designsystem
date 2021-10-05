@@ -80,7 +80,7 @@ describe('${name}', () => {
   )
 
   // Import new .scss file into styles/index.global.scss
-  fs.appendFileSync(`./src/index.scss`, `@import '${path}/${name}.scss';\n`)
+  fs.appendFileSync(`./src/index.scss`, `@import './${path}/${name}.scss';\n`)
 
   console.log('Successfully created new component!')
   return
