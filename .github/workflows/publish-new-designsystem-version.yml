@@ -3,8 +3,8 @@ name: Publish New Version of DesignSystem to NPM
 on:
   push:
     branches:
-      - master
-      
+      - main
+
 jobs:
   Publish-New-DesignSystem-Version:
     runs-on: ubuntu-latest
