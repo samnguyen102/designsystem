@@ -14,20 +14,17 @@ import ButtonProps from './Button.types'
  * and therefore should always be used instead of simply adding
  * an onClick method to a basic HTML element.
  *
- * @param type: solid, outline, text
+ * @param type: primary, secondary, tertiary
  * Defines the appearance of the button
- * `solid` should be used for primary actions
- * `outline` can be used for secondary interactions
- * `text` can be used for non-focused clickable elements, as well as links
+ * `primary` should be used for primary actions
+ * `secondary` can be used for secondary interactions
+ * `tertiary` can be used for non-focused clickable elements, as well as links
  *
  * @param size: small, medium, large
  * welp this one seems pretty straightforward....
  *
- * @param color: default, blue, yellow, red
- * `default` renders the UI kits standard white button
- * `blue` can be used for accents, links, and submit buttons
- * `yellow can be used for warnings or confirmations
- * `red` can be used for dangerous actions, deletions, and uninstalls
+ * @param color: white, green, black, blue
+ * defines the background color of the button
  *
  * @param id: string
  * Used to apply a custom ID property to the HTML button element
@@ -42,7 +39,7 @@ import ButtonProps from './Button.types'
  */
 export const Button: FC<ButtonProps> = ({
   children,
-  type = 'solid',
+  type = 'primary',
   size = 'medium',
   color = 'white',
   id,
