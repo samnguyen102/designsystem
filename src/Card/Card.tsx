@@ -6,6 +6,7 @@ export const Card: FC<CardProps> = ({
   type = 'primary',
   classList,
   children,
+  onClick,
 }) => {
   let className = `se-card ${type}`
   if (classList) {
@@ -13,7 +14,7 @@ export const Card: FC<CardProps> = ({
   }
 
   return (
-    <div id={id} className={className}>
+    <div id={id} className={className} onClick={onClick}>
       {children}
     </div>
   )
