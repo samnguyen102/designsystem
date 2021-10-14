@@ -1,14 +1,14 @@
 {
-  "name": "@sharingexcess/designsystem",
-  "version": "1.2.2",
-  "private": false,
+  "name": "@izocloud/ui",
+  "version": "0.1.0",
+  "private": true,
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
     "build"
   ],
   "types": "build/index.d.ts",
-  "description": "A component kit for the Sharing Excess Design System built with React, TypeScript, Jest, and Storybook",
+  "description": "A component kit for the iZotope Design System built with React, TypeScript, Jest, and Storybook",
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sharingexcess/designsystem.git"
+    "url": "git+https://github.com/izocloud/ui.git"
   },
   "keywords": [
     "React",
@@ -31,12 +31,12 @@
     "Sass",
     "Storybook"
   ],
-  "author": "Ryan McHenry",
+  "author": "iZotope Cloud Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sharingexcess/designsystem/issues"
+    "url": "https://github.com/izocloud/ui/issues"
   },
-  "homepage": "https://github.com/sharingexcess/designsystem#readme",
+  "homepage": "https://github.com/izocloud/ui#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
@@ -54,9 +54,12 @@
     "@types/react-dom": "^16.9.14",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
+    "enzyme": "^3.11.0",
+    "eslint-config-prettier": "^8.3.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "node-sass": "^6.0.1",
+    "prettier": "^2.2.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "rollup": "^2.56.3",
@@ -67,8 +70,6 @@
     "sass-loader": "^10.2.0",
     "ts-jest": "^26.5.6",
     "tslib": "^1.10.0",
-    "typescript": "^4.4.2",
-    "eslint-config-prettier": "^8.3.0",
-    "prettier": "^2.2.1"
+    "typescript": "^4.4.2"
   }
 }

@@ -1,4 +1,4 @@
-#se-modal-background {
+#izo-modal-background {
   position: fixed;
   z-index: 50;
   width: 100vw;
@@ -11,14 +11,14 @@
   align-items: center;
   @include fade-in;
 
-  .se-modal {
+  .izo-modal {
     position: relative;
     width: 92vw;
     max-width: 600px;
     padding: 32px;
-    background: var(--se-white);
+    background: var(--izo-white);
     border-radius: 8px;
-    box-shadow: var(--se-shadow-large);
+    box-shadow: var(--izo-shadow-large);
     @include move-in;
 
     @include mobile {

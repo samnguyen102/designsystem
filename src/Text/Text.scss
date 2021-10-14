@@ -1,4 +1,4 @@
-.se-text {
+.izo-text {
   position: relative;
   font-family: 'Montserrat';
 
@@ -82,35 +82,27 @@
     @include ellipsis;
   }
 
-  &.white {
-    color: var(--se-white);
+  &.shadow {
+    @include shadow;
   }
 
-  &.green {
-    color: var(--se-green-primary);
+  &.white {
+    color: izo-color('white');
   }
 
   &.black {
-    color: var(--se-black);
+    color: izo-color('black');
   }
 
   &.grey {
-    color: var(--se-grey-primary);
+    color: izo-color('grey-500');
   }
 
   &.blue {
-    color: var(--se-blue-primary);
+    color: izo-color('blue');
   }
 
   &.red {
-    color: var(--se-red-primary);
-  }
-
-  &.shadow {
-    text-shadow: var(--se-shadow-small);
-  }
-
-  &.bold {
-    font-weight: 800;
+    color: izo-color('red');
   }
 }

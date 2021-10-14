@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
 import React from 'react'
-import ExternalLink from './ExternalLink'
+import { ExternalLink } from './ExternalLink'
 
 export default {
   title: 'ExternalLink',

@@ -8,7 +8,7 @@ export const ExternalLink: React.FC<ExternalLinkProps> = ({
 }) => (
   <a
     href={to}
-    className="se-external-link"
+    className="izo-external-link"
     rel="noopener noreferrer"
     target="_blank"
     style={fullWidth ? { width: '100%' } : null}
