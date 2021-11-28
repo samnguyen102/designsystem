@@ -45,7 +45,6 @@ export const Input: FC<InputProps> = ({
   error = false,
   validated = false,
 }) => {
-  let className = `se-input`
   if (!value.length) className += ' empty'
   if (error) className += ' error'
   if (validated) className += ' validated'
