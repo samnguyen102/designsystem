@@ -1,9 +1,8 @@
 import { ChangeEventHandler, HTMLProps } from 'react'
 
-export default interface InputProps
-  extends Omit<HTMLProps<HTMLInputElement>, 'onChange'> {
+export default interface InputProps extends HTMLProps<HTMLInputElement> {
   id?: string
-  classList?: string[]
+  className?: string
   type?: 'text' | 'number' | 'tel'
   label: string
   value: string

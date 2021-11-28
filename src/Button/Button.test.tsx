@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import { Button } from './Button'
 
 describe('Button', () => {
-  const wrapper = shallow(<Button handler={() => {}}>Test</Button>)
+  const wrapper = shallow(<Button onClick={() => {}}>Test</Button>)
   it('Should render without crashing.', () => {
     const c = wrapper.find('.se-button')
     expect(c.length).toBe(1)

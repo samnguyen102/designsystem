@@ -37,7 +37,15 @@
   --font-header: 'Montserrat';
 }
 
-// START: SASS mixins
+// START: SASS mixins and functions
+
+@function izo-color($name: 'black', $opacity: 1) {
+  $color: var(--izo-#{color});
+  @if $name == 'transparent' {
+    @return rgba(var($color), 0);
+  }
+  @return rgba(var($color), $opacity);
+}
 
 @mixin ellipsis {
   overflow: hidden !important;

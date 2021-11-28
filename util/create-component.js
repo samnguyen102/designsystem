@@ -25,7 +25,7 @@ try {
 import ${name}Props from './${name}.interface'
 
 export const ${name}: FC<${name}Props> = ({ id, classList }) => {
-  let className = \`se-${name.toLowerCase()}\`
+  let className = \`izo-${name.toLowerCase()}\`
   if (classList) {
     className = \`\${className} \${classList.join(' ')}\`
   }
@@ -73,7 +73,7 @@ describe('${name}', () => {
 
   fs.writeFileSync(
     `${basePath}/${name}.scss`,
-    `.se-${name.toLowerCase()} {
+    `.izo-${name.toLowerCase()} {
   // add your component styles here
 }
 `

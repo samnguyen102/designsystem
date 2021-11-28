@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-// import DEFAULT_FALLBACK_IMAGE from '../fallback.jpeg'
+import DEFAULT_FALLBACK_IMAGE from '../fallback.jpeg'
 import ImageProps from './Image.interface'
 
 /**
@@ -15,32 +15,29 @@ import ImageProps from './Image.interface'
  * @param id: string
  * Used to apply a custom ID property to the HTML img element
  *
- * @param classList: string[]
- * Used to apply a list of custom classes to the HTML img element
+ * @param className: string
+ * Used to apply a custom class to the HTML img element
  *
  * @param alt: string
  * Used to provide a description of the rendered image
  *
  * @return HTML <img> element
  */
-export const Image: FC<ImageProps> = ({ src, classList, id, alt }) => {
-  // const handleFallback = (e: { target: any }) => {
-  //   if (e.target.src !== DEFAULT_FALLBACK_IMAGE) {
-  //     e.target.src = DEFAULT_FALLBACK_IMAGE
-  //   }
-  // }
-
-  let className = `se-image`
-  if (classList) {
-    className = `${className} ${classList.join(' ')}`
+export const Image: FC<ImageProps> = ({ src, className, id, alt }) => {
+  const handleFallback = (e: { target: any }) => {
+    if (e.target.src !== DEFAULT_FALLBACK_IMAGE) {
+      e.target.src = DEFAULT_FALLBACK_IMAGE
+    }
   }
+
+  className = `izo-image ${className}`
 
   return (
     <img
       src={src}
       className={className}
       id={id}
-      // onError={(e) => handleFallback(e)}
+      onError={e => handleFallback(e)}
       alt={alt}
     />
   )

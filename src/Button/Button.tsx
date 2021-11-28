@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import ButtonProps from './Button.types'
+import ButtonProps from './Button.interface'
 
 /**
  * component: Button
@@ -14,25 +14,25 @@ import ButtonProps from './Button.types'
  * and therefore should always be used instead of simply adding
  * an onClick method to a basic HTML element.
  *
- * @param type: primary, secondary, tertiary
+ * @param type: solid, outline, text
  * Defines the appearance of the button
- * `primary` should be used for primary actions
- * `secondary` can be used for secondary interactions
- * `tertiary` can be used for non-focused clickable elements, as well as links
+ * `solid` should be used for primary actions
+ * `outline` can be used for secondary interactions
+ * `text` can be used for non-focused clickable elements, as well as links
  *
  * @param size: small, medium, large
  * welp this one seems pretty straightforward....
  *
- * @param color: white, green, black, blue
+ * @param color: white, black, blue, red
  * defines the background color of the button
  *
  * @param id: string
  * Used to apply a custom ID property to the HTML button element
  *
- * @param classList: string[]
+ * @param className: string
  * Used to apply a list of custom classes to the HTML button element
  *
- * @param handler: function
+ * @param onClick: function
  * Callback to be applied to click and key press event listeners
  *
  * @return HTML <button> element
@@ -43,25 +43,24 @@ export const Button: FC<ButtonProps> = ({
   size = 'medium',
   color = 'white',
   id,
-  classList,
+  className,
   fullWidth,
-  handler,
+  onClick,
   disabled,
 }) => {
-  let className = `se-button type-${type} size-${size} color-${color}${
+  // add default classes to optional custom className
+  className = `izo-button type-${type} size-${size} color-${color}${
     fullWidth ? ' full-width' : ''
-  }`
-  if (classList) {
-    className = `${className} ${classList.join(' ')}`
-  }
+  } ${className}`
+
+  const handler = disabled ? undefined : onClick
 
   return (
     <button
       type="button"
       id={id}
       className={className}
-      onClick={disabled ? undefined : handler}
-      onKeyDown={disabled ? undefined : handler}
+      onClick={handler}
       disabled={disabled}
     >
       {children}

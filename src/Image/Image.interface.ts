@@ -1,6 +1,6 @@
 export default interface ImageProps {
   src: string
-  classList?: string[]
+  className?: string
   id?: string
   alt: string
 }

@@ -14,8 +14,8 @@ import InputProps from './Input.interface'
  * @param id: string
  * Used to apply a custom ID property to the HTML input element
  *
- * @param classList: string[]
- * Used to apply a list of custom classes to the HTML input element
+ * @param className: string
+ * Used to apply custom classes to the HTML input element
  *
  * @param label: string
  * Description of what the user is asked to input, will hover above inputted text
@@ -38,7 +38,7 @@ import InputProps from './Input.interface'
  */
 export const Input: FC<InputProps> = ({
   id,
-  classList,
+  className,
   label,
   value = '',
   onChange,
@@ -49,9 +49,6 @@ export const Input: FC<InputProps> = ({
   if (!value.length) className += ' empty'
   if (error) className += ' error'
   if (validated) className += ' validated'
-  if (classList) {
-    className = `${className} ${classList.join(' ')}`
-  }
 
   return (
     <div className={className} id={id}>
