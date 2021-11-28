@@ -81,6 +81,11 @@ export default {
           dest: 'build',
           rename: 'Modal/Modal.scss',
         },
+        {
+          src: 'src/FlexContainer/FlexContainer.scss',
+          dest: 'build',
+          rename: 'FlexContainer/FlexContainer.scss',
+        },
       ],
     }),
   ],
