@@ -9,6 +9,9 @@
   ],
   "types": "build/index.d.ts",
   "description": "A component kit for the Sharing Excess Design System built with React, TypeScript, Jest, and Storybook",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
