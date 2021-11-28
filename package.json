@@ -8,7 +8,7 @@
     "build"
   ],
   "types": "build/index.d.ts",
-  "description": "A component kit for the iZotope Design System built with React, TypeScript, Jest, and Storybook",
+  "description": "A component kit for the Sharing Excess Design System built with React, TypeScript, Jest, and Storybook",
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
@@ -16,12 +16,11 @@
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook",
     "generate": "node ./util/create-component.js",
-    "prepublishOnly": "npm run build",
-    "build-storybook": "build-storybook"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/izocloud/ui.git"
+    "url": "git+https://github.com/sharingexcess/designsystem.git"
   },
   "keywords": [
     "React",
@@ -32,12 +31,12 @@
     "Sass",
     "Storybook"
   ],
-  "author": "iZotope Cloud Team",
+  "author": "Ryan McHenry",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/izocloud/ui/issues"
+    "url": "https://github.com/sharingexcess/designsystem/issues"
   },
-  "homepage": "https://github.com/izocloud/ui#readme",
+  "homepage": "https://github.com/sharingexcess/designsystem#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
@@ -47,10 +46,7 @@
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-node-resolve": "^11.2.1",
-    "@storybook/addon-actions": "^6.3.12",
-    "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-links": "^6.3.12",
-    "@storybook/react": "^6.3.12",
+    "@storybook/react": "^3.4.12",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@types/jest": "^24.9.1",
@@ -58,11 +54,9 @@
     "@types/react-dom": "^16.9.14",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
-    "eslint-config-prettier": "^8.3.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "node-sass": "^6.0.1",
-    "prettier": "^2.2.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "rollup": "^2.56.3",
@@ -73,10 +67,8 @@
     "sass-loader": "^10.2.0",
     "ts-jest": "^26.5.6",
     "tslib": "^1.10.0",
-    "typescript": "^4.4.2"
-  },
-  "dependencies": {
-    "babel-register": "6.26",
-    "webpack": "^4.46.0"
+    "typescript": "^4.4.2",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.2.1"
   }
 }
