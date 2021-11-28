@@ -1,6 +1,6 @@
 {
   "name": "@sharingexcess/designsystem",
-  "version": "1.2.4",
+  "version": "1.2.2",
   "private": false,
   "main": "build/index.js",
   "module": "build/index.esm.js",
@@ -9,9 +9,6 @@
   ],
   "types": "build/index.d.ts",
   "description": "A component kit for the Sharing Excess Design System built with React, TypeScript, Jest, and Storybook",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
@@ -57,14 +54,12 @@
     "@types/react-dom": "^16.9.14",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
-    "eslint-config-prettier": "^8.3.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "node-sass": "^6.0.1",
-    "prettier": "^2.2.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "rollup": "^2.60.1",
+    "rollup": "^2.56.3",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^3.1.8",
@@ -72,6 +67,8 @@
     "sass-loader": "^10.2.0",
     "ts-jest": "^26.5.6",
     "tslib": "^1.10.0",
-    "typescript": "^4.4.2"
+    "typescript": "^4.4.2",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.2.1"
   }
 }
