@@ -36,7 +36,7 @@ export const Spacer: FC<SpacerProps> = ({
   id,
   className,
 }) => {
-  const isMobile = window.innerWidth < 600
+  const isMobile = window && window.innerWidth < 600
 
   return (
     <div
