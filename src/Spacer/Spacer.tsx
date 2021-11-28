@@ -31,21 +31,14 @@ import SpacerProps from './Spacer.interface'
 export const Spacer: FC<SpacerProps> = ({
   height = 8,
   width = 8,
-  heightMobile,
-  widthMobile,
   id,
   className,
 }) => {
-  const isMobile = window && window.innerWidth < 600
-
   return (
     <div
       id={id}
       className={`se-spacer${className ? ' ' + className : ''}`}
-      style={{
-        height: isMobile && heightMobile ? heightMobile : height,
-        width: isMobile && widthMobile ? widthMobile : width,
-      }}
+      style={{ height, width }}
     />
   )
 }
