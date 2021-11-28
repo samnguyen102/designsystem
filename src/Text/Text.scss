@@ -1,8 +1,8 @@
 .se-text {
   position: relative;
-  font-family: 'Montserrat';
 
   &.primary-header {
+    font-family: var(--font-header);
     font-size: clamp(36px, 4vw, 64px);
     line-height: 1.3em;
     font-weight: 900;
@@ -13,6 +13,7 @@
   }
 
   &.secondary-header {
+    font-family: var(--font-header);
     font-size: clamp(24px, 3vw, 36px);
     line-height: 1.3em;
     font-weight: 700;
@@ -24,6 +25,7 @@
   }
 
   &.section-header {
+    font-family: var(--font-header);
     font-size: clamp(20px, 2vw, 32px);
     line-height: 1.3em;
     font-weight: 700;
@@ -34,6 +36,7 @@
   }
 
   &.subheader {
+    font-family: var(--font-body);
     font-size: clamp(14px, 1.3vw, 20px);
     line-height: 1.6em;
     font-weight: 500;
@@ -44,6 +47,7 @@
   }
 
   &.small-header {
+    font-family: var(--font-header);
     font-size: clamp(16px, 1.5vw, 24px);
     line-height: 1.5em;
     letter-spacing: 0.05em;
@@ -55,12 +59,14 @@
   }
 
   &.paragraph {
+    font-family: var(--font-body);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 24px;
   }
 
   &.small {
+    font-family: var(--font-body);
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;

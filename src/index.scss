@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap&family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   --se-transparent: rgba(255, 255, 255, 0);
@@ -24,14 +24,16 @@
   --se-green-primary: rgba(78, 165, 40, 1);
   --se-green-transparent: rgba(78, 165, 40, 0.2);
   --se-blue-primary: rgba(78, 108, 231, 1);
+  --se-blue-transparent: rgba(78, 108, 231, 0.2);
   --se-red-primary: rgba(216, 73, 16, 1);
+  --se-red-transparent: rgba(216, 73, 16, 0.2);
   --se-green-light: rgba(227, 247, 222, 1);
-  --se-blue-light: rgba(227, 235, 255, 1);
+  --se-blue-light: rgb(177, 195, 240);
   --se-red-light: rgba(255, 231, 221, 1);
   --se-green-dark: rgba(33, 104, 16, 1);
   --se-blue-dark: rgba(21, 52, 180, 1);
   --se-red-dark: rgba(176, 57, 10, 1);
-  --font-body: 'Montserrat';
+  --font-body: 'Open Sans';
   --font-header: 'Montserrat';
 }
 
@@ -63,6 +65,14 @@
   }
 }
 
+@mixin focus {
+  &:focus {
+    &:not(:disabled) {
+      @content;
+    }
+  }
+}
+
 @mixin mobile {
   @media (max-width: 600px) {
     @content;
@@ -75,9 +85,9 @@
   }
 }
 
-@mixin fade-in {
+@mixin fade-in($duration: 0.32s, $delay: 0s) {
   opacity: 0;
-  animation: fade-in 0.32s ease forwards;
+  animation: fade-in $duration ease forwards $delay;
 
   @keyframes fade-in {
     to {
@@ -109,3 +119,4 @@
 @import './Card/Card.scss';
 @import './Logo/Logo.scss';
 @import './Modal/Modal.scss';
+@import './FlexContainer/FlexContainer.scss';

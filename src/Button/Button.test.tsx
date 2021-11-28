@@ -5,7 +5,7 @@ import { Button } from './Button'
 describe('Button', () => {
   const wrapper = shallow(<Button handler={() => {}}>Test</Button>)
   it('Should render without crashing.', () => {
-    const c = wrapper.find('.izo-button')
+    const c = wrapper.find('.se-button')
     expect(c.length).toBe(1)
   })
 })
