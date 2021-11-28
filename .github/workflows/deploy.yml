@@ -13,8 +13,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://npm.pkg.github.com/
-          scope: '@izocloud'
+          registry-url: https://registry.npmjs.org/
       - run: npm install
         env:
           NPM_TOKEN: ${{secrets.GITHUB_TOKEN}}
