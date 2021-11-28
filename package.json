@@ -1,13 +1,7 @@
 {
-<<<<<<< HEAD
   "name": "@sharingexcess/designsystem",
   "version": "1.2.3",
   "private": false,
-=======
-  "name": "@izocloud/ui",
-  "version": "0.1.0",
-  "private": true,
->>>>>>> d4de772d72b7555e793224c5cda876176735797d
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
@@ -64,10 +58,6 @@
     "@types/react-dom": "^16.9.14",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
-<<<<<<< HEAD
-=======
-    "enzyme": "^3.11.0",
->>>>>>> d4de772d72b7555e793224c5cda876176735797d
     "eslint-config-prettier": "^8.3.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
@@ -84,12 +74,9 @@
     "ts-jest": "^26.5.6",
     "tslib": "^1.10.0",
     "typescript": "^4.4.2"
-<<<<<<< HEAD
   },
   "dependencies": {
     "babel-register": "6.26",
     "webpack": "^4.46.0"
-=======
->>>>>>> d4de772d72b7555e793224c5cda876176735797d
   }
 }
