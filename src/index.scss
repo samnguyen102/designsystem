@@ -1,31 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://use.typekit.net/yvk2fve.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap&family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --font-header: 'Korolev';
-  --font-body: 'Roboto';
+  --se-transparent: rgba(255, 255, 255, 0);
+  --se-black: rgba(33, 36, 41, 1);
+  --se-black-transparent: rgba(0, 0, 0, 0.2);
+  --se-grey-dark: rgba(83, 87, 90, 1);
+  --se-grey-primary: rgba(157, 161, 164, 1);
+  --se-grey-light: rgba(230, 232, 234, 1);
+  --se-white: rgba(255, 255, 255, 1);
+  --se-white-transparent: rgba(255, 255, 255, 0.2);
+  --se-green-gradient: linear-gradient(
+    to bottom right,
+    rgba(123, 218, 83, 1),
+    rgba(62, 113, 40, 1)
+  );
+  --se-shadow-small: 0 clamp(2px, 0.24vw, 4px) clamp(2px, 0.24vw, 4px)
+    var(--se-black-transparent);
+  --se-shadow-medium: 0 clamp(4px, 0.8vw, 10px) clamp(4px, 0.8vw, 10px)
+    var(--se-black-transparent);
+  --se-shadow-large: 0 clamp(8px, 1.6vw, 16px) clamp(8px, 1.6vw, 16px)
+    var(--se-black-transparent);
 
-  --izo-white: 255, 255, 255; // #FFFFFF;
-  --izo-black: 0, 0, 0; // #000000;
-  --izo-transparent: 0, 0, 0; // #00000000;
-
-  --izo-grey-100: 241, 243, 245; // #F1F3F5;
-  --izo-grey-200: 165, 172, 178; // #A5ACB2;
-  --izo-grey-300: 116, 130, 140; // #74828C;
-  --izo-grey-400: 86, 96, 104; // #566068;
-  --izo-grey-500: 49, 58, 66; // #313A42;
-  --izo-grey-600: 30, 36, 41; // #1E2429;
-  --izo-grey-700: 19, 22, 26; // #13161A;
-
-  --izo-red: 255, 87, 102; // #FF5766;
-  --izo-orange: 255, 96, 28; // #FF601C;
-  --izo-yellow: 248, 165, 41; // #F8A529;
-  --izo-yellow-green: 196, 232, 107; // #C4E86B;
-  --izo-teal: 9, 185, 185; // #09B9B9;
-  --izo-light-blue: 169, 221, 228; // #A9DDE4;
-  --izo-medium-blue: 9, 178, 222; // #09B2DE;
-  --izo-blue: 47, 135, 255; // #2F87FF;
-  --izo-purple: 113, 85, 199; // #7155C7;
+  --se-green-primary: rgba(78, 165, 40, 1);
+  --se-green-transparent: rgba(78, 165, 40, 0.2);
+  --se-blue-primary: rgba(78, 108, 231, 1);
+  --se-blue-transparent: rgba(78, 108, 231, 0.2);
+  --se-red-primary: rgba(216, 73, 16, 1);
+  --se-red-transparent: rgba(216, 73, 16, 0.2);
+  --se-green-light: rgba(227, 247, 222, 1);
+  --se-blue-light: rgb(177, 195, 240);
+  --se-red-light: rgba(255, 231, 221, 1);
+  --se-green-dark: rgba(33, 104, 16, 1);
+  --se-blue-dark: rgba(21, 52, 180, 1);
+  --se-red-dark: rgba(176, 57, 10, 1);
+  --font-body: 'Open Sans';
+  --font-header: 'Montserrat';
 }
 
 // START: SASS mixins and functions
@@ -64,6 +73,14 @@
   }
 }
 
+@mixin focus {
+  &:focus {
+    &:not(:disabled) {
+      @content;
+    }
+  }
+}
+
 @mixin mobile {
   @media (max-width: 600px) {
     @content;
@@ -76,30 +93,9 @@
   }
 }
 
-@mixin shadow($size: 'medium') {
-  @if $size == 'small' {
-    box-shadow: 0
-      clamp(2px, 0.24vw, 4px)
-      clamp(2px, 0.24vw, 4px)
-      var(--izo-black-transparent);
-  }
-  @if $size == 'medium' {
-    box-shadow: 0
-      clamp(4px, 0.8vw, 10px)
-      clamp(4px, 0.8vw, 10px)
-      var(--izo-black-transparent);
-  }
-  @if $size == 'large' {
-    box-shadow: 0
-      clamp(8px, 1.6vw, 16px)
-      clamp(8px, 1.6vw, 16px)
-      var(--izo-black-transparent);
-  }
-}
-
-@mixin fade-in {
+@mixin fade-in($duration: 0.32s, $delay: 0s) {
   opacity: 0;
-  animation: fade-in 0.32s ease forwards;
+  animation: fade-in $duration ease forwards $delay;
 
   @keyframes fade-in {
     to {
@@ -131,3 +127,4 @@
 @import './Card/Card.scss';
 @import './Logo/Logo.scss';
 @import './Modal/Modal.scss';
+@import './FlexContainer/FlexContainer.scss';

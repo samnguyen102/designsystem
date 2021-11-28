@@ -7,7 +7,7 @@ describe('Input', () => {
     <Input label="Test Input" value="test" onChange={() => {}} />
   )
   it('Should render without crashing.', () => {
-    const c = wrapper.find('.izo-input')
+    const c = wrapper.find('.se-input')
     expect(c.length).toBe(1)
   })
 })
