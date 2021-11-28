@@ -12,16 +12,33 @@ import SpacerProps from './Spacer.interface'
  * by replacing the need to add margin to the top, bottom, left, or right
  * of an existing element, requiring style override of the UI kit default
  *
- * @param height: int
+ * @param height: number | string
  * Used to define the height of the empty, invisible div
  * Note: should be used in increments of 8px whenever possible
  *
- * @param width: int
+ * @param width: number | string
  * Used to define the width of the empty, invisible div
  * Note: should be used in increments of 8px whenever possible
  *
+ * @param id: string
+ * Used to apply a custom ID property to the HTML button element
+ *
+ * @param className: string
+ * Used to apply custom classes to the HTML button element
+ *
  * @return empty, invisible HTML <div/> element to create empty space
  */
-export const Spacer: FC<SpacerProps> = ({ height = 8, width = 8 }) => {
-  return <div className="se-spacer" style={{ height, width }} />
+export const Spacer: FC<SpacerProps> = ({
+  height = 8,
+  width = 8,
+  id,
+  className,
+}) => {
+  return (
+    <div
+      id={id}
+      className={`se-spacer${className ? ' ' + className : ''}`}
+      style={{ height, width }}
+    />
+  )
 }
