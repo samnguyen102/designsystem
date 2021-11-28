@@ -1,10 +1,10 @@
 #se-modal-background {
   position: fixed;
   z-index: 50;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
+  width: 300vw;
+  height: 300vh;
+  top: -100vh;
+  left: -100vw;
   background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
