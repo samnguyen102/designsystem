@@ -67,6 +67,11 @@ export default {
           rename: 'Card/Card.scss',
         },
         {
+          src: 'src/Dropdown/Dropdown.scss',
+          dest: 'build',
+          rename: 'Dropdown/Dropdown.scss',
+        },
+        {
           src: 'src/ExternalLink/ExternalLink.scss',
           dest: 'build',
           rename: 'ExternalLink/ExternalLink.scss',
